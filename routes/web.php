@@ -5,6 +5,8 @@ use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SearchController;
+
 
 
 
@@ -45,6 +47,10 @@ Route::get('/single', function () {
     return view('website.single');
 });
 
+Route::get('/category', function () {
+    return view('website.category');
+});
+
 Route::get('/search', 'SearchController@search')->name('search');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -62,7 +68,12 @@ Route::get('/template',function(){
 Route::any('/create','CategoryController@getCategoryList'); 
 
 // Route::resource('/shops', ShopController::class);
+
+//Route::get('/nearme','SearchController@near_me'); 
  
+
+Route::get('/nearme', 'App\Http\Controllers\SearchController@near_me');
+
 Route::resource('products', ProductController::class);
 
 Route::resource('shops', ShopController::class);

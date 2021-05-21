@@ -47,4 +47,10 @@ class Shop extends Model
     {
         return $this->belongsTo(\App\Models\Category::class, 'category_id');
     }
+
+    
+    public function area()
+    {
+        return $this->belongsTo(\App\Models\Area::class, 'area_id');
+    }
 }

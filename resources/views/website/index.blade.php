@@ -89,8 +89,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <nav class="navbar navbar-expand-lg navbar-light navigation">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="images/logo.png" alt="">
+                        <a class="navbar-brand" href="/">
+                            <img src="images/logo.png" href="/" alt="">
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -100,13 +100,13 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto main-nav ">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/about-us">About Us</a>
+                                    <a class="nav-link" href="/about-us"><b>About Us</b></a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="/contact-us">Contact Us</a>
+                                    <a class="nav-link" href="/contact-us"><b>Contact Us</b></a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="/store">Market</a>
+                                    <a class="nav-link" href="/store"><b>Market</b></a>
                                 </li>
                                 <li class="nav-item ">
                                     <a class="nav-link" href="/store"></a>
@@ -146,101 +146,83 @@
     <div class="container-fluid text-center">
         <div class="row content">
             <div class="col-sm-2 sidenav">
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <img src="images/home/add1.png" style="width: 190px;" alt="">
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <img src="images/home/add3.png" style="width: 190px;" alt="">
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
-                </div>
-                <div class="well">
-                    <p>ADS</p>
-                </div>
-                <div class="well">
-                    <p>ADS</p>
-                </div>
-                <div class="well">
-                    <p>ADS</p>
-                </div>
-                <div class="well">
-                    <p>ADS</p>
-                </div>
-                <div class="well">
-                    <p>ADS</p>
-                </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
             </div>
             <div class="col-sm-8 text-left">
@@ -250,7 +232,8 @@
   =            Hero Area            =
   ================================-->
 
-                <section class="hero-area bg-1 text-center overly">
+                <section class="hero-area bg-1 text-center overly"
+                    style="background-image: url(images/home/hero3.jpeg)">
                     <!-- Container Start -->
                     <div class="container-fluid">
                         <form action="{{ route('search') }}" method="GET" enctype="multipart/form-data">
@@ -260,30 +243,37 @@
                                     <!-- Header Contetnt -->
                                     <div class="content-block">
                                         <h1 style="color:#ffd700">hamadema.lk</h1>
-                                        <h3 style="color:#d95a00">Buy & Sell Near You </h3>
+                                        <h3 style="color:#D96C00">Buy & Sell Near You </h3>
                                         <p style="color:#ffd700">THE LARGEST STORES NETWORK</p>
                                         <div class="short-popular-category-list text-center">
                                             <h2 style="color:#ffd700">Popular Category</h2>
                                             <ul class="list-inline">
                                                 <li class="list-inline-item">
-                                                    <a style="color:#d95a00" href="category.html"><i
-                                                            class="fas fa-chalkboard-teacher"></i> Tution Classes </a>
+                                                    <a style="color:#D96C00; background-color: black; font-size: 3ch"
+                                                        href="/category"><i class="fas fa-chalkboard-teacher"></i>
+                                                        Tution Classes
+                                                    </a>
                                                 </li>
                                                 <li class="list-inline-item">
-                                                    <a style="color:#d95a00" href="category.html"><i
-                                                            class="fas fa-plug"></i> Hardwares </a>
+                                                    <a style="color:#D96C00; background-color: black; font-size: 3ch"
+                                                        href="/category"><i class="fas fa-plug"></i> Hardwares </a>
                                                 </li>
                                                 <li class="list-inline-item">
-                                                    <a style="color:#d95a00" href="category.html"><i
-                                                            class="fas fa-chair"></i> Furniture shops </a>
+                                                    <a style="color:#D96C00; background-color: black; font-size: 3ch"
+                                                        href="/category"><i class="fas fa-chair"></i> Furniture
+                                                        shops </a>
+                                                </li>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <li class="list-inline-item">
+                                                    <a style="color:#D96C00; background-color: black; font-size: 3ch"
+                                                        href="/category"><i class="fa fa-stethoscope"></i> Medical
+                                                        Centers </a>
                                                 </li>
                                                 <li class="list-inline-item">
-                                                    <a style="color:#d95a00" href="category.html"><i
-                                                            class="fa fa-stethoscope"></i> Medical Centers </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a style="color:#d95a00" href="category.html"><i
-                                                            class="fas fa-cut"></i>
+                                                    <a style="color:#D96C00; background-color: black; font-size: 3ch"
+                                                        href="/category"><i class="fas fa-cut"></i>
                                                         Tailor shops</a>
                                                 </li>
                                             </ul>
@@ -398,6 +388,10 @@
                                                     </a>
                                                 </div>
                                                 <div class="card-body">
+                                                    {{-- @foreach ($shops as $key => $shop)
+                                                        <h4 class="card-title"><a href="#">{{ $shop->name }}</a>
+                                                    @endforeach --}}
+
                                                     <h4 class="card-title"><a href="/store">Gunathilaka Enterprise</a>
                                                     </h4>
                                                     <ul class="list-inline product-meta">
@@ -544,13 +538,13 @@
                                         <div class="category-block">
                                             <div class="header">
                                                 <i class="fa fa-laptop icon-bg-1"></i>
-                                                <h4>Electronics</h4>
+                                                <h4>Texttile</h4>
                                             </div>
                                             <ul class="category-list">
-                                                <li><a href="category.html">Laptops <span>93</span></a></li>
+                                                {{-- <li><a href="category.html">Laptops <span>93</span></a></li>
                                                 <li><a href="category.html">Iphone <span>233</span></a></li>
                                                 <li><a href="category.html">Microsoft <span>183</span></a></li>
-                                                <li><a href="category.html">Monitors <span>343</span></a></li>
+                                                <li><a href="category.html">Monitors <span>343</span></a></li> --}}
                                             </ul>
                                         </div>
                                     </div> <!-- /Category List -->
@@ -559,13 +553,13 @@
                                         <div class="category-block">
                                             <div class="header">
                                                 <i class="fa fa-cart-plus icon-bg-2"></i>
-                                                <h4>Shops</h4>
+                                                <h4>Hardware</h4>
                                             </div>
                                             <ul class="category-list">
-                                                <li><a href="category.html">Cafe <span>393</span></a></li>
+                                                {{-- <li><a href="category.html">Cafe <span>393</span></a></li>
                                                 <li><a href="category.html">Restaurants <span>13</span></a></li>
                                                 <li><a href="category.html">Glosary<span>43</span></a></li>
-                                                <li><a href="category.html">Texttile<span>43</span></a></li>
+                                                <li><a href="category.html">Texttile<span>43</span></a></li> --}}
                                             </ul>
                                         </div>
                                     </div> <!-- /Category List -->
@@ -574,13 +568,13 @@
                                         <div class="category-block">
                                             <div class="header">
                                                 <i class="fa fa-home icon-bg-3"></i>
-                                                <h4>Property</h4>
+                                                <h4>Bookshop</h4>
                                             </div>
                                             <ul class="category-list">
-                                                <li><a href="category.html">Farms <span>93</span></a></li>
+                                                {{-- <li><a href="category.html">Farms <span>93</span></a></li>
                                                 <li><a href="category.html">Gym <span>23</span></a></li>
                                                 <li><a href="category.html">Hospitals <span>83</span></a></li>
-                                                <li><a href="category.html">Parolurs <span>33</span></a></li>
+                                                <li><a href="category.html">Parolurs <span>33</span></a></li> --}}
                                             </ul>
                                         </div>
                                     </div> <!-- /Category List -->
@@ -589,15 +583,15 @@
                                         <div class="category-block">
                                             <div class="header">
                                                 <i class="fa fa-graduation-cap icon-bg-4"></i>
-                                                <h4>Education</h4>
+                                                <h4>Saloon</h4>
                                             </div>
                                             <ul class="category-list">
-                                                <li><a href="category.html">Tution Class <span>53</span></a></li>
+                                                {{-- <li><a href="category.html">Tution Class <span>53</span></a></li>
                                                 <li><a href="category.html">Text Books <span>212</span></a></li>
                                                 <li><a href="category.html">Education Institutes <span>133</span></a>
                                                 </li>
                                                 <li><a href="category.html">Vocational Institutes<span>143</span></a>
-                                                </li>
+                                                </li> --}}
                                             </ul>
                                         </div>
                                     </div> <!-- /Category List -->
@@ -606,13 +600,13 @@
                                         <div class="category-block">
                                             <div class="header">
                                                 <i class="fa fa-briefcase icon-bg-5"></i>
-                                                <h4>Jobs</h4>
+                                                <h4>Furniture</h4>
                                             </div>
                                             <ul class="category-list">
-                                                <li><a href="category.html">It Jobs <span>93</span></a></li>
+                                                {{-- <li><a href="category.html">It Jobs <span>93</span></a></li>
                                                 <li><a href="category.html">Cleaning & Washing <span>233</span></a></li>
                                                 <li><a href="category.html">Management <span>183</span></a></li>
-                                                <li><a href="category.html">Voluntary Works <span>343</span></a></li>
+                                                <li><a href="category.html">Voluntary Works <span>343</span></a></li> --}}
                                             </ul>
                                         </div>
                                     </div> <!-- /Category List -->
@@ -621,13 +615,13 @@
                                         <div class="category-block">
                                             <div class="header">
                                                 <i class="fa fa-car icon-bg-6"></i>
-                                                <h4>Vehicles</h4>
+                                                <h4>Cafe</h4>
                                             </div>
                                             <ul class="category-list">
-                                                <li><a href="category.html">Bus <span>193</span></a></li>
+                                                {{-- <li><a href="category.html">Bus <span>193</span></a></li>
                                                 <li><a href="category.html">Cars <span>23</span></a></li>
                                                 <li><a href="category.html">Motobike <span>33</span></a></li>
-                                                <li><a href="category.html">Rent a car <span>73</span></a></li>
+                                                <li><a href="category.html">Rent a car <span>73</span></a></li> --}}
                                             </ul>
                                         </div>
                                     </div> <!-- /Category List -->
@@ -636,69 +630,69 @@
                                         <div class="category-block">
                                             <div class="header">
                                                 <i class="fa fa-paw icon-bg-7"></i>
-                                                <h4>Pets</h4>
+                                                <h4>Computer</h4>
                                             </div>
                                             <ul class="category-list">
-                                                <li><a href="category.html">Cats <span>65</span></a></li>
+                                                {{-- <li><a href="category.html">Cats <span>65</span></a></li>
                                                 <li><a href="category.html">Dogs <span>23</span></a></li>
                                                 <li><a href="category.html">Birds <span>113</span></a></li>
-                                                <li><a href="category.html">Others <span>43</span></a></li>
+                                                <li><a href="category.html">Others <span>43</span></a></li> --}}
                                             </ul>
                                         </div>
                                     </div> <!-- /Category List -->
                                     <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
                                         <div class="category-block">
                                             <div class="header">
-                                                <i class="fa fa-paw icon-bg-7"></i>
-                                                <h4>Pets</h4>
+                                                <i class="fa fa-paw icon-bg-8"></i>
+                                                <h4>Communication</h4>
                                             </div>
                                             <ul class="category-list">
-                                                <li><a href="category.html">Cats <span>65</span></a></li>
+                                                {{-- <li><a href="category.html">Cats <span>65</span></a></li>
                                                 <li><a href="category.html">Dogs <span>23</span></a></li>
                                                 <li><a href="category.html">Birds <span>113</span></a></li>
-                                                <li><a href="category.html">Others <span>43</span></a></li>
+                                                <li><a href="category.html">Others <span>43</span></a></li> --}}
                                             </ul>
                                         </div>
                                     </div> <!-- /Category List -->
                                     <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
                                         <div class="category-block">
                                             <div class="header">
-                                                <i class="fa fa-paw icon-bg-7"></i>
-                                                <h4>Pets</h4>
+                                                <i class="fa fa-paw icon-bg-1"></i>
+                                                <h4>Pharmacy</h4>
                                             </div>
                                             <ul class="category-list">
-                                                <li><a href="category.html">Cats <span>65</span></a></li>
+                                                {{-- <li><a href="category.html">Cats <span>65</span></a></li>
                                                 <li><a href="category.html">Dogs <span>23</span></a></li>
                                                 <li><a href="category.html">Birds <span>113</span></a></li>
-                                                <li><a href="category.html">Others <span>43</span></a></li>
+                                                <li><a href="category.html">Others <span>43</span></a></li> --}}
                                             </ul>
                                         </div>
                                     </div> <!-- /Category List -->
                                     <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
                                         <div class="category-block">
                                             <div class="header">
-                                                <i class="fa fa-paw icon-bg-7"></i>
-                                                <h4>Pets</h4>
+                                                <i class="fa fa-paw icon-bg-2"></i>
+                                                <h4>Medical Centers</h4>
                                             </div>
                                             <ul class="category-list">
-                                                <li><a href="category.html">Cats <span>65</span></a></li>
+                                                {{-- <li><a href="category.html">Cats <span>65</span></a></li>
                                                 <li><a href="category.html">Dogs <span>23</span></a></li>
                                                 <li><a href="category.html">Birds <span>113</span></a></li>
-                                                <li><a href="category.html">Others <span>43</span></a></li>
+                                                <li><a href="category.html">Others <span>43</span></a></li> --}}
                                             </ul>
                                         </div>
                                     </div> <!-- /Category List -->
                                     <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
                                         <div class="category-block">
                                             <div class="header">
-                                                <i class="fa fa-paw icon-bg-7"></i>
-                                                <h4>Pets</h4>
+                                                <i class="fa fa-paw icon-bg-3"></i>
+                                                <h4>Garaj</h4>
                                             </div>
                                             <ul class="category-list">
-                                                <li><a href="category.html">Cats <span>65</span></a></li>
+                                                {{-- <li><a href="category.html">Cats <span>65</span></a></li>
                                                 <li><a href="category.html">Dogs <span>23</span></a></li>
                                                 <li><a href="category.html">Birds <span>113</span></a></li>
-                                                <li><a href="category.html">Others <span>43</span></a></li>
+                                                <li><a href="category.html">Others <span>43</span></a></li> --}}
                                             </ul>
                                         </div>
                                     </div> <!-- /Category List -->
@@ -707,17 +701,85 @@
                                         <div class="category-block">
 
                                             <div class="header">
-                                                <i class="fa fa-laptop icon-bg-8"></i>
-                                                <h4>Services</h4>
+                                                <i class="fa fa-laptop icon-bg-4"></i>
+                                                <h4>Printing</h4>
                                             </div>
                                             <ul class="category-list">
-                                                <li><a href="category.html">Cleaning <span>93</span></a></li>
+                                                {{-- <li><a href="category.html">Cleaning <span>93</span></a></li>
                                                 <li><a href="category.html">Car Washing <span>233</span></a></li>
                                                 <li><a href="category.html">Clothing <span>183</span></a></li>
-                                                <li><a href="category.html">Business <span>343</span></a></li>
+                                                <li><a href="category.html">Business <span>343</span></a></li> --}}
                                             </ul>
                                         </div>
                                     </div> <!-- /Category List -->
+
+                                    <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
+                                        <div class="category-block">
+
+                                            <div class="header">
+                                                <i class="fa fa-laptop icon-bg-5"></i>
+                                                <h4>Tution</h4>
+                                            </div>
+                                            <ul class="category-list">
+                                                {{-- <li><a href="category.html">Cleaning <span>93</span></a></li>
+                                                <li><a href="category.html">Car Washing <span>233</span></a></li>
+                                                <li><a href="category.html">Clothing <span>183</span></a></li>
+                                                <li><a href="category.html">Business <span>343</span></a></li> --}}
+                                            </ul>
+                                        </div>
+                                    </div> <!-- /Category List -->
+
+
+                                    <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
+                                        <div class="category-block">
+
+                                            <div class="header">
+                                                <i class="fa fa-laptop icon-bg-6"></i>
+                                                <h4>Restaurant</h4>
+                                            </div>
+                                            <ul class="category-list">
+                                                {{-- <li><a href="category.html">Cleaning <span>93</span></a></li>
+                                                <li><a href="category.html">Car Washing <span>233</span></a></li>
+                                                <li><a href="category.html">Clothing <span>183</span></a></li>
+                                                <li><a href="category.html">Business <span>343</span></a></li> --}}
+                                            </ul>
+                                        </div>
+                                    </div> <!-- /Category List -->
+
+
+                                    <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
+                                        <div class="category-block">
+
+                                            <div class="header">
+                                                <i class="fa fa-laptop icon-bg-7"></i>
+                                                <h4>Tailor Shops</h4>
+                                            </div>
+                                            <ul class="category-list">
+                                                {{-- <li><a href="category.html">Cleaning <span>93</span></a></li>
+                                                <li><a href="category.html">Car Washing <span>233</span></a></li>
+                                                <li><a href="category.html">Clothing <span>183</span></a></li>
+                                                <li><a href="category.html">Business <span>343</span></a></li> --}}
+                                            </ul>
+                                        </div>
+                                    </div> <!-- /Category List -->
+
+
+                                    <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
+                                        <div class="category-block">
+
+                                            <div class="header">
+                                                <i class="fa fa-car icon-bg-8"></i>
+                                                <h4>vehical Sale</h4>
+                                            </div>
+                                            <ul class="category-list">
+                                                {{-- <li><a href="category.html">Cleaning <span>93</span></a></li>
+                                                <li><a href="category.html">Car Washing <span>233</span></a></li>
+                                                <li><a href="category.html">Clothing <span>183</span></a></li>
+                                                <li><a href="category.html">Business <span>343</span></a></li> --}}
+                                            </ul>
+                                        </div>
+                                    </div> <!-- /Category List -->
+
 
 
                                 </div>
@@ -741,8 +803,8 @@
                                     <h2>Start today to get more market exposure and
                                         grow your business</h2>
                                     <ul class="list-inline mt-30">
-                                        <li class="list-inline-item"><a class="btn btn-main" href="ad-listing.html">Add
-                                                Listing</a></li>
+                                        <li class="list-inline-item"><a class="btn btn-main"
+                                                href="ad-listing.html">Register</a></li>
                                         <li class="list-inline-item"><a class="btn btn-secondary"
                                                 href="category.html">Browser Listing</a></li>
                                     </ul>
@@ -867,101 +929,83 @@
 
             </div>
             <div class="col-sm-2 sidenav">
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <img src="images/home/add3.png" style="width: 190px;" alt="">
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <img src="images/home/add1.png" style="width: 190px;" alt="">
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
-                <div class="well">
-                    <p>ADS</p>
-                </div>
-                <div class="well">
-                    <p>ADS</p>
-                </div>
-                <div class="well">
-                    <p>ADS</p>
-                </div>
-                <div class="well">
-                    <p>ADS</p>
-                </div>
-                <div class="well">
-                    <p>ADS</p>
-                </div>
-                <div class="well">
-                    <p>ADS</p>
-                </div>
-                <div class="well">
-                    <p>ADS</p>
+                <div>
+                    <p></p>
                 </div>
             </div>
         </div>

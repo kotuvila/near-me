@@ -26,7 +26,7 @@
                             <th>Telephone</th>
                             <th>Description</th>
                             <th>Category</th>
-                            {{-- <th>Area</th> --}}
+                            <th>Area</th>
                             <th>Address</th>
                             <th>Latitude</th>
                             <th>Longitude</th>
@@ -49,7 +49,7 @@
                                 <td>{{ $shop->telephone }}</td>
                                 <td>{{ $shop->description }}</td>
                                 <td>{{ $shop->category->name }}</td>
-                                {{-- <td>{{ $shop->area->name }}</td> --}}
+                                <td>{{ $shop->area->name }}</td>
                                 <td>{{ $shop->address }}</td>
                                 <td>{{ $shop->latitude }}</td>
                                 <td>{{ $shop->longitude }}</td>

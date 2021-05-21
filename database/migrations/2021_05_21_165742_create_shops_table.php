@@ -37,9 +37,16 @@ class CreateShopsTable extends Migration
 
             $table->boolean('status')->default(0);  
 
-            $table->unsignedBigInteger('category_id')->references('id')->on('categories');
+            $table->integer('category_id')->unsigned();
+
             
-            $table->unsignedBigInteger('area_id')->references('id')->on('areas');
+            $table->integer('area_id')->unsigned();
+            
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('area_id')->references('id')->on('areas')->onDelete('cascade');
+            
+            
+            
 
             $table->timestamps();
 
