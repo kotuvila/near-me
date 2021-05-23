@@ -9,6 +9,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>hamadema.lk</title>
 
+
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+
+    <!-- Site Metas -->
+    <title>sales market - One page HTML Responsive</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style1.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- color -->
+    <link id="changeable-colors" rel="stylesheet" href="css/colors/orange.css" />
+
+    <!-- Modernizer -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- FAVICON -->
     <link href="img/favicon.png" rel="shortcut icon">
     <!-- PLUGINS CSS STYLE -->
@@ -123,13 +181,15 @@
                             </ul>
                             <ul class="navbar-nav ml-auto mt-10">
                                 <li class="nav-item">
-                                    <a class="nav-link text-white add-button" href="{{ route('login') }}"><i
-                                            class="fa fa-plus-circle"></i> {{ __('Login') }}</a>
+                                    <a class="nav-link text-white add-button" style="background-color: #4CAF50"
+                                        href="{{ route('login') }}"><i class="fa fa-plus-circle"></i>
+                                        {{ __('Login') }}</a>
                                 </li>
                                 &nbsp;
                                 <li class="nav-item">
-                                    <a class="nav-link text-white add-button" href="{{ route('register') }}"><i
-                                            class="fa fa-plus-circle"></i> {{ __('Register') }}</a>
+                                    <a class="nav-link text-white add-button" style="background-color: #4CAF50"
+                                        href="{{ route('register') }}"><i class="fa fa-plus-circle"></i>
+                                        {{ __('Register') }}</a>
                                 </li>
                                 &nbsp;
                                 <li class="nav-item">
@@ -232,17 +292,17 @@
   =            Hero Area            =
   ================================-->
 
-                <section class="hero-area bg-1 text-center overly"
-                    style="background-image: url(images/home/hero3.jpeg)">
+                {{-- <section class="hero-area bg-1 text-center overly" style="background-image: url(images/home/hero2.jpg)">
                     <!-- Container Start -->
                     <div class="container-fluid">
-                        <form action="{{ route('search') }}" method="GET" enctype="multipart/form-data">
-                            @csrf
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <!-- Header Contetnt -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- Header Contetnt -->
+                                <form action="{{ route('search') }}" method="GET" enctype="multipart/form-data">
+                                    @csrf
                                     <div class="content-block">
-                                        <h1 style="color:#ffd700">hamadema.lk</h1>
+                                        <h1 style="color:yellow">hamadema.lk</h1>
                                         <h3 style="color:#D96C00">Buy & Sell Near You </h3>
                                         <p style="color:#ffd700">THE LARGEST STORES NETWORK</p>
                                         <div class="short-popular-category-list text-center">
@@ -280,82 +340,347 @@
                                         </div>
 
                                     </div>
-                                    <!-- Advance Search -->
-                                    <div class="advance-search">
-                                        <div class="container-fluid">
-                                            <div class="row justify-content-center">
-                                                <div class="col-lg-12 col-md-12 align-content-center">
-                                                    <form>
-                                                        <div class="form-row">
-                                                            <div class="form-group col-md-5">
-                                                                <select class="w-100 form-control mt-lg-1 mt-md-2">
-                                                                    <option disabled selected>Select Area</option>
-                                                                    <option value="1">Gampaha</option>
-                                                                    <option value="2">Negombo</option>
-                                                                    <option value="4">Wattala</option>
-                                                                    <option value="4">Kadawatha</option>
-                                                                    <option value="4">Kiribathgoda</option>
-                                                                    <option value="4">Wattala</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group col-md-5">
-                                                                <select class="w-100 form-control mt-lg-1 mt-md-2">
-                                                                    <option disabled selected>Select Category</option>
-                                                                    <option value="1">Jobs</option>
-                                                                    <option value="4">Vehicals</option>
-                                                                    <option value="4">Glosary</option>
-                                                                </select>
-                                                            </div>
 
-                                                            <div class="form-group col-md-2 align-self-center">
-                                                                <button type="submit"
-                                                                    class="btn btn-primary"><i></i>Seach now
-                                                                </button>
-                                                            </div>
+                                </form>
+                                <!-- Advance Search -->
+                                <div class="advance-search">
+                                    <div class="container-fluid">
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-12 col-md-12 align-content-center">
+
+                                                <form action="{{ route('searchby') }}" method="POST"
+                                                    enctype="multipart/form-data">
+                                                    @csrf
+                                                    <div class="form-row">
+
+                                                        <div class="form-group col-md-5">
+                                                            <select name="area"
+                                                                class="w-100 form-control mt-lg-1 mt-md-2">
+                                                                <option disabled selected>Select Area
+                                                                </option>
+
+                                                                @foreach ($areas as $are)
+
+                                                                    <option value="{{ $are->id }}">
+                                                                        {{ $are->name }}</option>
+                                                                @endforeach
+                                                            </select>
                                                         </div>
-                                                    </form>
-                                                </div>
+
+
+
+
+
+
+                                                        <div class="form-group col-md-5">
+                                                            <select name="cat"
+                                                                class="w-100 form-control mt-lg-1 mt-md-2">
+                                                                <option disabled selected>Select Category
+                                                                </option>
+
+                                                                @foreach ($cats as $cat1)
+
+                                                                    <option value="{{ $cat1->id }}">
+                                                                        {{ $cat1->name }}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
+
+
+                                                        <div class="form-group col-md-2 align-self-center">
+                                                            <button style="background-color: #4CAF50" type="submit"
+                                                                class="btn text-white"><i></i>
+                                                                &nbsp; &nbsp;&nbsp;&nbsp;Search&nbsp;&nbsp;
+                                                        </div>
+
+
+                                                    </div>
+
+
+                                                </form>
+
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Advance Search -->
-                                    <div class="advance-search">
-                                        <div class="container-fluid">
-                                            <div class="row justify-content-center">
-                                                <div class="col-lg-12 col-md-12 align-content-center">
-                                                    <form>
-                                                        <div class="form-row">
-                                                            <div class="form-group col-md-8">
-                                                                <input type="text" class="form-control my-2 my-lg-1"
-                                                                    id="inputtext4"
-                                                                    placeholder="What are you looking for">
-                                                            </div>
-                                                            <div class="form-group col-md-2 align-self-center">
-                                                                <button type="submit" class="btn btn-primary">Search
-                                                                    Now</button>
-                                                            </div>
-                                                            <div class="form-group col-md-2 align-self-center">
-                                                                <button type="submit" class="btn btn-primary"><i
-                                                                        class="fa fa-location-arrow"></i> &nbsp;Near Me
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                 </div>
+                                <!-- Advance Search -->
+                                <div class="advance-search">
+                                    <div class="container-fluid">
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-12 col-md-12 align-content-center">
+                                                <form>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-8">
+                                                            <input type="text" class="form-control my-2 my-lg-1"
+                                                                id="inputtext4" placeholder="What are you looking for">
+                                                        </div>
+                                                        <div class="form-group col-md-2 align-self-center">
+                                                            <button type="submit" style="background-color: #4CAF50"
+                                                                class="btn text-white">Search
+                                                                Now</button>
+                                                        </div>
+                                                        <div class="form-group col-md-2 align-self-center">
+                                                            <button type="submit" style="background-color: #4CAF50"
+                                                                class="btn text-white"><i
+                                                                    class="fa fa-location-arrow"></i> &nbsp;&nbsp;Near
+                                                                Me
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                        </form>
+                        </div>
+
                     </div>
                     <!-- Container End -->
-                </section>
+                </section> --}}
 
                 <!--===================================
   =            Client Slider            =
   ====================================-->
+
+
+                <div id="banner" style="background-image: url(images/home/hero3.jpeg); background-repeat: no-repeat">
+
+                    <div class="pad-top-100 parallax">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                                        <div class="banner-text">
+                                            <div class="banner-cell">
+                                                <h2 class="block-title text-center"
+                                                    style=" align-content: center; color: white;">
+                                                    The Largest Stores Network</h2>
+
+                                                <h1 style="padding-top: 0%; color: #fff973">
+                                                    hamadema.lk<span class="typer" id="some-id" data-delay="200"
+                                                        data-delim=":" data-words="....."
+                                                        data-colors="gold"></span><span class="cursor"
+                                                        data-cursorDisplay="" data-owner="some-id"></span></h1>
+                                                <br>
+
+                                                <h2 style="padding-top: 0%; color: gold"><span class="typer"
+                                                        id="some-id" data-delay="200" data-delim=":" data-words="....."
+                                                        data-colors="red"></span><span class="cursor"
+                                                        data-cursorDisplay="Join With Us......."
+                                                        data-owner="some-id"></span></h2>
+
+                                                <br>
+                                                <br>
+                                                <br>
+
+
+
+                                            </div>
+                                            <!-- end banner-cell -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end container -->
+                    </div>
+                    <!-- end special-menu -->
+                </div>
+
+
+                <div class="special-box" style="background-color:black;">
+
+
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- Header Contetnt -->
+                                <div class="content-block">
+                                    {{-- <h1 style="color:yellow">hamadema.lk</h1>
+                                        <h3 style="color:#D96C00">Buy & Sell Near You </h3>
+                                        <p style="color:#ffd700">THE LARGEST STORES NETWORK</p> --}}
+                                    <div class="short-popular-category-list text-center">
+                                        <h2 style="color:black">Popular Categories</h2>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <a style="color:#D96C00; font-size: 3ch" href="/category"><i
+                                                        class="fas fa-chalkboard-teacher"></i>
+                                                    Tution Classes
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a style="color:#D96C00;  font-size: 3ch" href="/category"><i
+                                                        class="fas fa-plug"></i>
+                                                    Hardwares </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a style="color:#D96C00;  font-size: 3ch" href="/category"><i
+                                                        class="fas fa-chair"></i> Furniture
+                                                    shops </a>
+                                            </li>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <li class="list-inline-item">
+                                                <a style="color:#D96C00; font-size: 3ch" href="/category"><i
+                                                        class="fa fa-stethoscope"></i> Medical
+                                                    Centers </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a style="color:#D96C00;  font-size: 3ch" href="/category"><i
+                                                        class="fas fa-cut"></i>
+                                                    Tailor shops</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                                <br>
+                                <br>
+
+                                <!-- Advance Search -->
+                                <div class="advance-search">
+                                    <div class="container-fluid">
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-12 col-md-12 align-content-center">
+
+                                                <form action="{{ route('searchby') }}" method="POST"
+                                                    enctype="multipart/form-data">
+                                                    @csrf
+                                                    <div class="form-row">
+
+                                                        <div class="form-group col-md-5">
+                                                            <select name="area" class="w-100 input-lg mt-lg-1 mt-md-2">
+                                                                <option disabled selected>Select
+                                                                    Area
+                                                                </option>
+
+                                                                @foreach ($areas as $are)
+
+                                                                    <option value="{{ $are->id }}">
+                                                                        {{ $are->name }}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
+
+
+
+
+
+
+                                                        <div class="form-group col-md-5">
+                                                            <select name="cat" class="w-100   input-lg mt-lg-1 mt-md-2">
+                                                                <option disabled selected>Select
+                                                                    Category
+                                                                </option>
+
+                                                                @foreach ($cats as $cat1)
+
+                                                                    <option value="{{ $cat1->id }}">
+                                                                        {{ $cat1->name }}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
+
+
+                                                        <div class="form-group col-md-2 align-self-center">
+                                                            <button style="background-color: #4CAF50; height: 45px;"
+                                                                type="submit" class="btn text-white"><i></i>
+                                                                &nbsp;
+                                                                &nbsp;&nbsp;&nbsp;Search&nbsp;&nbsp;
+                                                        </div>
+
+
+                                                    </div>
+
+
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Advance Search -->
+                                <div class="advance-search">
+                                    <div class="container-fluid">
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-12 col-md-12 align-content-center">
+
+                                                <div class="form-row">
+                                                    {{-- <div class="form-group col-md-8">
+                                                            <input type="text" class="form-control input-lg"
+                                                                id="inputtext4" placeholder="What are you looking for">
+                                                        </div>
+                                                        <div class="form-group col-md-2 align-self-center">
+                                                            <button type="submit" style="background-color: #4CAF50"
+                                                                class="btn text-white">Search
+                                                                Now</button>
+                                                        </div> --}}
+
+                                                    {{-- <div class="form-group col-md-10 align-self-center">
+                                                            <button type="submit" style="background-color: #4CAF50"
+                                                                class="btn text-white">Search
+                                                                Now</button>
+                                                        </div> --}}
+
+
+                                                    <div class="form-group col-md-2 align-self-center">
+                                                        <form action="{{ route('nearme') }}" method="POST"
+                                                            enctype="multipart/form-data">
+                                                            @csrf
+                                                            <button type="submit"
+                                                                style="background-color: #4CAF50; width: 790px; height: 50px;"
+                                                                class="btn text-white"><i
+                                                                    class="fa fa-location-arrow"></i>
+                                                                &nbsp;&nbsp;Near
+                                                                Me
+                                                            </button>
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- end special-box -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                 <!--===========================================
@@ -368,7 +693,6 @@
                             <div class="col-md-12">
                                 <div class="section-title">
                                     <h2>Trending Shops</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, magnam.</p>
                                 </div>
                             </div>
                         </div>
@@ -376,142 +700,81 @@
                             <!-- offer 01 -->
                             <div class="col-lg-12">
                                 <div class="trending-ads-slide">
-                                    <div class="col-sm-12 col-lg-4">
-                                        <!-- product card -->
-                                        <div class="product-item bg-light">
-                                            <div class="card">
-                                                <div class="thumb-content">
-                                                    <!-- <div class="price">$200</div> -->
-                                                    <a href="single.html">
-                                                        <img class="card-img-top img-fluid"
-                                                            src="images/products/products-1.jpg" alt="Card image cap">
-                                                    </a>
-                                                </div>
-                                                <div class="card-body">
-                                                    {{-- @foreach ($shops as $key => $shop)
-                                                        <h4 class="card-title"><a href="#">{{ $shop->name }}</a>
-                                                    @endforeach --}}
 
-                                                    <h4 class="card-title"><a href="/store">Gunathilaka Enterprise</a>
-                                                    </h4>
-                                                    <ul class="list-inline product-meta">
-                                                        <li class="list-inline-item">
-                                                            <a href="single.html"><i
-                                                                    class="fa fa-folder-open-o"></i>Furnitures</a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="fa fa-calendar"></i>26th December</a>
-                                                        </li>
-                                                    </ul>
-                                                    <p class="card-text">For any type of wood work</p>
-                                                    <p class="card-text">61/2 Annasikotuwa , Naranwala, Gampaha</p>
-                                                    <p class="card-text">T.P 033 22 55 789</p>
-                                                    <div class="product-ratings">
-                                                        <ul class="list-inline">
-                                                            <li class="list-inline-item selected"><i
-                                                                    class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item selected"><i
-                                                                    class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item selected"><i
-                                                                    class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item selected"><i
-                                                                    class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+
+
+
+
+                                    {{-- @foreach ($shops as $shop)
+                                        <h1> {{ $shop->name }} </h1>
+                                    @endforeach --}}
+
+
+
+
+
+                                    @foreach ($shops as $shop)
+                                        <div class="col-sm-12 col-lg-4">
+                                            <!-- product card -->
+                                            <div class="product-item bg-light">
+                                                <div class="card">
+                                                    <div class="thumb-content">
+                                                        <!-- <div class="price">$200</div> -->
+                                                        <a href="single.html">
+
+                                                            {{-- <img src="{{ asset('/storage/files/' . $shop->photo) }}"
+                                                                width="300px"> --}}
+                                                            <img class="card-img-top img-fluid"
+                                                                src="{{ asset('/storage/files/' . $shop->photo) }}"
+                                                                alt="Card image cap"
+                                                                style="height: 200px; width: 300px">
+                                                        </a>
+                                                    </div>
+                                                    <div class="card-body" style="height: 400px">
+
+                                                        <h4 class="card-title"><a href="/store">{{ $shop->name }}</a>
+
+
+                                                        </h4>
+                                                        <ul class="list-inline product-meta">
+                                                            <li class="list-inline-item">
+                                                                <a href="single.html"><i
+                                                                        class="fa fa-folder-open-o"></i>{{ $shop->category->name }}</a>
+                                                            </li>
+                                                            <br>
+                                                            <li class="list-inline-item">
+                                                                <a href="#"><i class="fa fa-calendar"></i>26th
+                                                                    December</a>
+                                                            </li>
                                                         </ul>
+                                                        <p class="card-text">{{ $shop->description }}</p>
+                                                        <p class="card-text">{{ $shop->address }}</p>
+                                                        <p class="card-text">{{ $shop->area->name }}</p>
+                                                        <p class="card-text">T.P {{ $shop->telephone }}</p>
+                                                        <div class="product-ratings">
+                                                            <ul class="list-inline">
+                                                                <li class="list-inline-item selected"><i
+                                                                        class="fa fa-star"></i>
+                                                                </li>
+                                                                <li class="list-inline-item selected"><i
+                                                                        class="fa fa-star"></i>
+                                                                </li>
+                                                                <li class="list-inline-item selected"><i
+                                                                        class="fa fa-star"></i>
+                                                                </li>
+                                                                <li class="list-inline-item selected"><i
+                                                                        class="fa fa-star"></i>
+                                                                </li>
+                                                                <li class="list-inline-item"><i class="fa fa-star"></i>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="col-sm-12 col-lg-4">
-                                        <!-- product card -->
-                                        <div class="product-item bg-light">
-                                            <div class="card">
-                                                <div class="thumb-content">
-                                                    <!-- <div class="price">$200</div> -->
-                                                    <a href="single.html">
-                                                        <img class="card-img-top img-fluid"
-                                                            src="images/products/products-3.jpg" alt="Card image cap">
-                                                    </a>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h4 class="card-title"><a href="/store">Gunathilaka Enterprise</a>
-                                                    </h4>
-                                                    <ul class="list-inline product-meta">
-                                                        <li class="list-inline-item">
-                                                            <a href="single.html"><i
-                                                                    class="fa fa-folder-open-o"></i>Furnitures</a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="fa fa-calendar"></i>26th December</a>
-                                                        </li>
-                                                    </ul>
-                                                    <p class="card-text">For any type of wood work</p>
-                                                    <p class="card-text">61/2 Annasikotuwa , Naranwala, Gampaha</p>
-                                                    <p class="card-text">T.P 033 22 55 789</p>
-                                                    <div class="product-ratings">
-                                                        <ul class="list-inline">
-                                                            <li class="list-inline-item selected"><i
-                                                                    class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item selected"><i
-                                                                    class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item selected"><i
-                                                                    class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item selected"><i
-                                                                    class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-sm-12 col-lg-4">
-                                        <!-- product card -->
-                                        <div class="product-item bg-light">
-                                            <div class="card">
-                                                <div class="thumb-content">
-                                                    <!-- <div class="price">$200</div> -->
-                                                    <a href="single.html">
-                                                        <img class="card-img-top img-fluid"
-                                                            src="images/products/products-2.jpg" alt="Card image cap">
-                                                    </a>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h4 class="card-title"><a href="/store">Gunathilaka Enterprise</a>
-                                                    </h4>
-                                                    <ul class="list-inline product-meta">
-                                                        <li class="list-inline-item">
-                                                            <a href="single.html"><i
-                                                                    class="fa fa-folder-open-o"></i>Furnitures</a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <a href="#"><i class="fa fa-calendar"></i>26th December</a>
-                                                        </li>
-                                                    </ul>
-                                                    <p class="card-text">For any type of wood work</p>
-                                                    <p class="card-text">61/2 Annasikotuwa , Naranwala, Gampaha</p>
-                                                    <p class="card-text">T.P 033 22 55 789</p>
-                                                    <div class="product-ratings">
-                                                        <ul class="list-inline">
-                                                            <li class="list-inline-item selected"><i
-                                                                    class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item selected"><i
-                                                                    class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item selected"><i
-                                                                    class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item selected"><i
-                                                                    class="fa fa-star"></i></li>
-                                                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -529,8 +792,6 @@
                                 <!-- Section title -->
                                 <div class="section-title">
                                     <h2>All Categories</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, provident!
-                                    </p>
                                 </div>
                                 <div class="row">
                                     <!-- Category list -->
@@ -804,9 +1065,11 @@
                                         grow your business</h2>
                                     <ul class="list-inline mt-30">
                                         <li class="list-inline-item"><a class="btn btn-main"
-                                                href="ad-listing.html">Register</a></li>
+                                                href="ad-listing.html">Register</a>
+                                        </li>
                                         <li class="list-inline-item"><a class="btn btn-secondary"
-                                                href="category.html">Browser Listing</a></li>
+                                                href="category.html">Browser
+                                                Listing</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1032,6 +1295,69 @@
     </script>
     <script src="{{ asset('plugins/google-map/gmap.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
+
+
+
+
+    <!-- ALL JS FILES -->
+    <script src="{{ asset('js/all.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
+    <!-- ALL PLUGINS -->
+    <script src="{{ asset('js/custom.js') }}"></script>
+
+
+
+
+
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function sendEmail() {
+            var name = $("#form_name");
+            var email = $("#email");
+            var subject = $("#form_name");
+            var body = $("#discription");
+
+            if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
+                $.ajax({
+                    url: 'sendEmail.php',
+                    method: 'POST',
+                    dataType: 'JSON',
+                    data: {
+                        name: name.val(),
+                        email: email.val(),
+                        subject: subject.val(),
+                        body: body.val()
+                    },
+                    success: function(response) {
+                        if (response.status == "success")
+                            alert(
+                                'Email Sent Successfully!!!, your message has been submitted to us.Thank you'
+                            );
+
+                        else {
+                            alert('Please Try Again!');
+                            console.log(response);
+                        }
+                    }
+                });
+            }
+        }
+
+        function isNotEmpty(caller) {
+            if (caller.val() == "") {
+                caller.css('border', '1px solid red');
+                return false;
+            } else
+                caller.css('border', '');
+
+            return true;
+        }
+
+    </script>
+
 
 </body>
 

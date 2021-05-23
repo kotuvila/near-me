@@ -5,52 +5,91 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\Model;
+use App\Models\Shop;
+use App\Models\Category;
+use App\Models\Area;
+use App\Http\Controllers\AreaController;
 
 class SearchController extends Controller
 {
     //
     public function index()
     {
-        
-        $shops = Shop::latest()->paginate(5);
-        return view('website.index',compact('shops'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+
+        //
+    
     }
 
-    public function create()
+    public function search()
     {
-        // $categories = Category::all();
-        // $areas = Area::all();
-        $shops = Shop::all();
-        return view('website.index',compact('shops'));
+
+        
+    }
+    
+
+
+    
+    public function searchby(Request $request)
+    {
+        //echo "test";
+        $cat_id= $request->cat;
+        $area_id= $request->area;
+        $cats = DB::table('categories')->select('id','name')->get();
+        $areas = DB::table('areas')->select('id','name')->get();
+        $shops = DB::table('shops')->where('category_id',$cat_id)->orWhere('area_id',$area_id)->get();
+       if (count($shops)==0){
+        return redirect()->back() ->with('alert', 'no shops!');
+       }
+       else{
+
+        return view('website.category',compact('shops','cats','areas'));
+        // var_dump($shops);die;        
+       }
+     	
         
     }
 
-    public function near_me(){
-        
-		$lat = 6.90826; // assign your current latitude
-		$lon = 79.89349; // assign your currunt longitude
-		
-		$newUpperLat = $lat + 2.498065;
-		$newLowerLat = $lat - 2.498065;
-		
-		$newUpperLon = $lon + 0.02111;
-		$newUpperLon = $lon - 0.02111;
 
         
-		
-		$shops = DB::table('shops')
-                ->whereBetween('latitude', [$newUpperLat, $newLowerLat])
-                ->whereBetween('longitude', [$newUpperLon, $newUpperLon])
-                ->get();
-				
-        // $shops = DB::table('shops')
-        //         ->where('latitude', $lat)
-        //         ->where('longitude', $lon)
-        //         ->get();
-		var_dump($shops);die;	
-		
-	}
+    public function near_me()
+    {
+
+
+        $latitude       =       7.041670930540654;
+        $longitude      =       80.00718673226316;
+        
+
+        $shops          =       DB::table("shops");
+
+        $shops          =       $shops->select("*", DB::raw("6371 * acos(cos(radians(" . $latitude . "))
+                                * cos(radians(latitude)) * cos(radians(longitude) - radians(" . $longitude . "))
+                                + sin(radians(" .$latitude. ")) * sin(radians(latitude))) AS distance"));
+        $shops          =       $shops->having('distance', '<', 10);
+        $shops          =       $shops->orderBy('distance', 'asc');
+
+        $shops          =       $shops->get();
+
+
+
+        
+        $cats = DB::table('categories')->select('id','name')->get();
+        $areas = DB::table('areas')->select('id','name')->get();
+        
+        //$shops = DB::table('shops')->where('category_id',$cat_id)->orWhere('area_id',$area_id)->get();
+        if (count($shops)==0){
+         return redirect()->back() ->with('alert', 'no shops!');
+        }
+        else{
+ 
+         return view('website.category',compact('shops','cats','areas'));
+          //var_dump($shops);die;        
+        }
+	
+        
+    }
+    
+
+
     
     
     

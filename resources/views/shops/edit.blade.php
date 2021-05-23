@@ -6,7 +6,7 @@
 
     <div class="card">
 
-        <div class="card-header bg-primary">
+        <div class="card-header" style="background-color: brown">
             <h3 style="color:white">Edit Item Details</h3>
         </div>
 

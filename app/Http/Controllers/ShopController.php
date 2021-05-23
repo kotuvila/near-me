@@ -19,7 +19,7 @@ class ShopController extends Controller
     public function index()
     {
         
-        $shops = Shop::latest()->paginate(5);
+        $shops = Shop::latest()->paginate(10);
         return view('shops.index',compact('shops'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -83,6 +83,7 @@ class ShopController extends Controller
             // dd($shop);
             return redirect()->route('shops.index')
                 ->with('success','Shop created successfully.');
+                
     
             // flash('shop created successfully')->success();
             // return redirect()->route('items.index');

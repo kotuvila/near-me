@@ -6,6 +6,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\AreaController;
+
 
 
 
@@ -27,9 +29,9 @@ use App\Http\Controllers\SearchController;
 
 
 
-Route::get('/', function () {
-    return view('website.index');
-});
+Route::get('/', 'App\Http\Controllers\HomeController@index');
+
+
 
 Route::get('/about-us', function () {
     return view('website.about-us');
@@ -47,11 +49,16 @@ Route::get('/single', function () {
     return view('website.single');
 });
 
-Route::get('/category', function () {
-    return view('website.category');
-});
+// Route::get('/category', function () {
+//     return view('website.category');
+// });
 
-Route::get('/search', 'SearchController@search')->name('search');
+Route::post('/nearme', 'App\Http\Controllers\SearchController@near_me')->name('nearme');
+
+//Route::get('/search', 'SearchController@search')->name('search');
+
+Route::post('/searchby', 'App\Http\Controllers\SearchController@searchby')->name('searchby');
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
@@ -67,12 +74,15 @@ Route::get('/template',function(){
 
 Route::any('/create','CategoryController@getCategoryList'); 
 
+//Route::get('/catshow', ['CategoryController@showCategory']);    
+
+
 // Route::resource('/shops', ShopController::class);
 
 //Route::get('/nearme','SearchController@near_me'); 
  
 
-Route::get('/nearme', 'App\Http\Controllers\SearchController@near_me');
+
 
 Route::resource('products', ProductController::class);
 

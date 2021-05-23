@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="card">
-        <div class="card-header bg-primary">
+        <div class="card-header" style="background-color: brown">
             <h3 style="color:white">SET UP NEW SHOP</h3>
         </div>
         <div class="card-body">
@@ -19,7 +19,7 @@
                                 <input type="text" name="id" readonly class="form-control form-control-sm"
                                     placeholder="Enter id Here" @if ($lastShop) value="{{ $lastShop->id + 1 }}">
                          @else
-                                             value="1001"> @endif @if ($errors->has('id'))
+                                                         value="1001"> @endif @if ($errors->has('id'))
                                 <em class="invalid-feedback">
                                     {{ $errors->first('id') }}
                                 </em>
@@ -73,20 +73,7 @@
                             </div>
                         </div>
 
-                        {{-- <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                               <span class="input-group-text">Category</span>
-                            </diV>
-                            <select name="category" class="custom-select">
-                               <option disabled selected>Organization Type</option>
-                               @foreach ($data as $page)
-                               <option value="{{ $page->id }}">{{ $page->name }}</option>
-                               @endforeach
-                            </select>
-                         </div>
-                         @error('category')
-                         <div class="alert alert-danger">{{ $message }}</div>
-                         @enderror --}}
+
 
 
                         <div class="row form-group {{ $errors->has('category') ? 'has-error' : '' }}">
@@ -110,24 +97,6 @@
                                 @endif
                             </div>
                         </div>
-
-
-                        {{-- <div class="row form-group {{ $errors->has('code') ? 'has-error' : '' }}">
-                            <div class="col-lg-3"><lable>Shop ID<span style="color: red">*</span>:</lable></div>
-                            <div class="col-lg-9">
-                                <input type="text" name="code" readonly class="form-control form-control-sm"  placeholder="Enter Code Here"
-                                       @if ($lastShop)
-                                       value="{{$lastShop->code + 1 }}">
-                                @else
-                                    value="1001">
-                                @endif
-                                @if ($errors->has('code'))
-                                    <em class="invalid-feedback">
-                                        {{ $errors->first('code') }}
-                                    </em>
-                                @endif 
-                            </div>
-                        </div> --}}
 
 
                         <div class="row form-group {{ $errors->has('telephone') ? 'has-error' : '' }}">

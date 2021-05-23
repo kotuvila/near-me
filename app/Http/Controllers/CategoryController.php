@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Shop;
 use App\Models\Product;
-
+use DB;
 
 use Illuminate\Http\Request;
 
@@ -111,5 +111,22 @@ class CategoryController extends Controller
         $category->delete();
         return redirect()->route('admin.categories.index'); //
     }
+
+
+    public function showCategory(Category $category)
+    {
+        $cats = DB::table('categories')->select('id','name')->get();
+        // var_dump($cat);die;	
+        return view('website.index',['cats'=>$cats]);
+        
+        // $categories = Category::get()
+        //                     ->map
+        //                     ->only(['id', 'name']);
+  
+        // dd($categories);
+
+        
+    }
+    
         
 }
