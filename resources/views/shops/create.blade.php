@@ -19,7 +19,7 @@
                                 <input type="text" name="id" readonly class="form-control form-control-sm"
                                     placeholder="Enter id Here" @if ($lastShop) value="{{ $lastShop->id + 1 }}">
                          @else
-                                                         value="1001"> @endif @if ($errors->has('id'))
+                                                                                                                 value="1001"> @endif @if ($errors->has('id'))
                                 <em class="invalid-feedback">
                                     {{ $errors->first('id') }}
                                 </em>
@@ -33,7 +33,7 @@
                             </div>
                             <div class="col-lg-9">
                                 <input type="text" name="name" class="form-control form-control-sm"
-                                    placeholder="Enter  Name Here"
+                                    placeholder="Enter  Name Here" pattern="[a-zA-Z'-'\s]*"
                                     value="{{ old('name', isset($shop) ? $shop->name : '') }}">
                                 @if ($errors->has('name'))
                                     <em class="invalid-feedback">
@@ -105,7 +105,7 @@
                             </div>
                             <div class="col-lg-9">
                                 <input type="text" name="telephone" class="form-control form-control-sm"
-                                    placeholder="Enter  Telephone Number Here"
+                                    placeholder="Enter  Telephone Number Here" maxlength="10" pattern="\d{10}"
                                     value="{{ old('telephone', isset($shop) ? $shop->telephone : '') }}">
                                 @if ($errors->has('telephone'))
                                     <em class="invalid-feedback">

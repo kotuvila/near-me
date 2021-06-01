@@ -27,7 +27,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="wrapper">
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+            <img class="animation__shake" src="admin/dist/img/loader-animation.gif" alt="hamdema.lk">
+            {{-- <img class="animation__shake" src="dist/img/loader-animation.gif" alt="hamdema.lk" height="60" width="60"> --}}
+            {{-- <img src="{{ asset('/storage/files/' . $shop->photo) }}"
+            width="300px"> --}}
         </div>
         @include('layouts.partials.topnav')
 
@@ -73,9 +76,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     @include('layouts.partials.footer-script')
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="/js/app.js"></script>
+    <script src="/js/app.js"></script> --}}
 </body>
 
 </html>

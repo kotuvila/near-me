@@ -4,14 +4,14 @@
 @section('content')
     <div class="row">
         <div class="col-2">
-            <a href="{{ route('products.create') }}" class="btn btn-success"> ADD NEW PRODUCT</a>
+            <a href="{{ route('products.create') }}" class="btn btn-warning"> ADD NEW PRODUCT</a>
         </div>
     </div>
     <br />
     <div class="card">
-        <div class="card-header bg-warning">
-            <h3 style="color:white">All
-                Items</h3>
+        <div class="card-header" style="background-color: brown">
+            <h3 style="color:white">
+                Products </h3>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -45,14 +45,23 @@
                                 <td>{{ $product->price }}</td>
                                 <td>{{ $product->description }}</td>
                                 <td>
-                                    <a href="{{ route('products.edit', $product->id) }}"
-                                        class="btn btn-warning btn-sm">EDIT</a>
+                                    <a href="{{ route('products.edit', $product->id) }}" class="btn btn-warning btn-sm"
+                                        style="width: 90px">EDIT</a>
+                                    <br>
+                                    <br>
+
+                                    <a href="{{ route('products.edit', $product->id) }}" style="width: 90px"
+                                        class="btn btn-warning btn-sm">VIEW</a>
+                                    <br>
+                                    <br>
+
                                     <form action="{{ route('products.destroy', $product->id) }}" method="POST"
-                                        onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                        onsubmit="return confirm('{{ trans('Are You Sure?') }}');"
                                         style="display: inline-block;">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                        <input type="submit" class="btn btn-danger btn-sm" value="{{ trans('DELETE') }}">
+                                        <input style="width: 90px" type="submit" class="btn btn-warning btn-sm"
+                                            value="{{ trans('DELETE') }}">
                                     </form>
                                 </td>
                             </tr>

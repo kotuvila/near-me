@@ -2,6 +2,7 @@
 
 
 @section('content')
+
     <div class="row">
         <div class="col-2">
             <a href="{{ route('shops.create') }}" class="btn btn-warning">SET UP NEW SHOP</a>
@@ -17,6 +18,7 @@
         <div style="background-color: brown" class="card-header">
             <h3 style="color:white">REGISTERED SHOPS </h3>
         </div>
+
         <div class="card-body">
             <div class="table-responsive">
                 <table class=" table table-sm table-bordered table-striped table-hover datatable">

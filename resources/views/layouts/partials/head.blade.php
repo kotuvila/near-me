@@ -3,9 +3,9 @@
 <title>hamadema.lk</title>
 
 
-<!-- Styles -->
+{{-- <!-- Styles -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<link href="/css/app.css" rel="stylesheet">
+<link href="/css/app.css" rel="stylesheet"> --}}
 <!-- Google Font: Source Sans Pro -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 <!-- Font Awesome -->
@@ -27,3 +27,10 @@
 <link rel="stylesheet" href="{{ asset('admin/plugins/daterangepicker/daterangepicker.css') }}">
 <!-- summernote -->
 <link rel="stylesheet" href="{{ asset('admin/plugins/summernote/summernote-bs4.min.css') }}">
+
+<style>
+    /* input[pattern]:invalid {
+        color: red;
+    } */
+
+</style>

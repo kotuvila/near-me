@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="card">
-        <div class="card-header bg-primary">
+        <div class="card-header" style="background-color: brown">
             <h3 style="color:white">ADD NEW PRODUCT</h3>
         </div>
         @if ($message = Session::get('success'))
@@ -47,7 +47,7 @@
                                 <input type="text" name="id" readonly class="form-control form-control-sm"
                                     placeholder="Enter id Here" @if ($lastProduct) value="{{ $lastProduct->id + 1 }}">
                          @else
-                                                                                                                                                                 value="1001"> @endif @if ($errors->has('id'))
+                                                                                                                                                                     value="1001"> @endif @if ($errors->has('id'))
                                 <em class="invalid-feedback">
                                     {{ $errors->first('id') }}
                                 </em>

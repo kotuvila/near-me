@@ -4,69 +4,75 @@
 @section('content')
     <div class="row">
         <div class="col-2">
-            <a href="{{ route('promotions.create') }}" class="btn btn-success"> ADD NEW PROMO</a>
+            <a href="{{ route('promotions.create') }}" class="btn btn-warning"> ADD NEW PROMO</a>
         </div>
     </div>
-    <br/>
+    <br />
     <div class="card">
-        <div class="card-header bg-warning"><h3 style="color:white">All
-                Items</h3></div>
+        <div class="card-header" style="background-color: brown">
+            <h3 style="color:white">
+                Promotions</h3>
+        </div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class=" table table-sm table-bordered table-striped table-hover datatable">
                     <thead>
-                    <tr>
-                        {{--                <th>ID</th>--}}
-                        <th>Item Code</th>
-                        <th>Name</th>
-                        <th>Supplier</th>
-                        <th>Brand</th>
-                        <th>Category</th>
-                        <th>Subcategory</th>
-                        <th>Status</th>
-                        <th>Option</th>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            {{-- <th>Status</th> --}}
+                            <th>Option</th>
 
-                    </tr>
-                    </thead>
-                    {{-- <tbody>
-
-                    @foreach($items as $key => $item)
-
-                        <tr data-entry-id="{{ $item->id }}">
-                            <td>{{$item->code}}</td>
-                            <td>{{$item->name}}</td>
-                            <td>
-                                @foreach($item->supplier as $sup)
-                                    {{$sup->name}}
-                                @endforeach
-                            </td>
-                            <td>{{$item->brand->name}}</td>
-                            <td>{{$item->subcategory->category->name}}</td>
-                            <td>{{$item->subcategory->name}}</td>
-                            <td>{{$item->status}}</td>
-                            <td>
-                                <a href="{{ route('admin.items.edit', $item->id) }}"
-                                   class="btn btn-warning btn-sm">EDIT</a>
-                                <form action="{{ route('admin.items.destroy', $item->id) }}" method="POST"
-                                      onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
-                                      style="display: inline-block;">
-                                    <input type="hidden" name="_method" value="DELETE">
-                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    <input type="submit" class="btn btn-danger btn-sm"
-                                           value="{{ trans('global.delete') }}">
-                                </form>
-                            </td>
                         </tr>
-                    @endforeach
-                    </tbody> --}}
+                    </thead>
+                    <tbody>
+
+                        @foreach ($promotions as $key => $promotion)
+
+                            <tr data-entry-id="{{ $promotion->id }}">
+                                <td>{{ $promotion->id }}</td>
+                                <td>{{ $promotion->name }}</td>
+                                <td>{{ $promotion->description }}</td>
+                                <td>{{ $promotion->start_date }}</td>
+                                <td>{{ $promotion->end_date }}</td>
+                                {{-- <td>{{ $promotion->status }}</td> --}}
+                                <td>
+                                    <a href="{{ route('promotions.edit', $promotion->id) }}"
+                                        class="btn btn-warning btn-sm" style="width: 90px">EDIT</a>
+                                    <br>
+                                    <br>
+
+                                    <a href="{{ route('promotions.edit', $promotion->id) }}" style="width: 90px"
+                                        class="btn btn-warning btn-sm">VIEW</a>
+                                    <br>
+                                    <br>
+
+                                    <form action="{{ route('promotions.destroy', $promotion->id) }}" method="POST"
+                                        onsubmit="return confirm('{{ trans('Are You Sure?') }}');"
+                                        style="display: inline-block;">
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                        <input style="width: 90px" type="submit" class="btn btn-warning btn-sm"
+                                            value="{{ trans('DELETE') }}">
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
                 </table>
             </div>
         </div>
     </div>
     <script>
-        $(function () {
+        $(function() {
             let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
-            $('.datatable:not(.ajaxTable)').DataTable({ buttons: dtButtons })
+            $('.datatable:not(.ajaxTable)').DataTable({
+                buttons: dtButtons
+            })
         });
+
     </script>
 @endsection

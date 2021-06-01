@@ -81,8 +81,11 @@ class ShopController extends Controller
 
             $shop->save();
             // dd($shop);
-            return redirect()->route('shops.index')
-                ->with('success','Shop created successfully.');
+            // return redirect()->route('shops.index')
+            //     ->with('success','Shop created successfully.');
+
+                flash('Shop created successfully')->success();
+                return redirect()->route('shops.index');
                 
     
             // flash('shop created successfully')->success();
@@ -108,7 +111,10 @@ class ShopController extends Controller
      */
     public function edit(Shop $shop)
     {
-        return view('shops.edit',compact('shop'));
+        $categories = Category::all();
+        $areas = Area::all();
+        
+        return view('shops.edit',compact('shop','categories','areas'));
     }
     
     /**
@@ -139,8 +145,10 @@ class ShopController extends Controller
         //dd($shop);
         $shop->save();
 
+        flash('Shop created successfully')->success();
+        return redirect()->route('shops.index');
     //direct back to the index page.
-    return redirect()->route('shops.index')->with('message', 'Organization Updated Successfully');
+    //return redirect()->route('shops.index')->with('message', 'Shop Updated Successfully');
     }
     
     /**
@@ -153,7 +161,10 @@ class ShopController extends Controller
     {
         $shop->delete();
     
-        return redirect()->route('shops.index')
-                        ->with('success','Shop deleted successfully');
+        // return redirect()->route('shops.index')
+        //                 ->with('success','Shop deleted successfully');
+
+                        flash('Shop deleted successfully')->success();
+                        return redirect()->route('shops.index');
     }
 }

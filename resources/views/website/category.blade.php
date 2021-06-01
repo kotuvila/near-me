@@ -358,7 +358,8 @@
                                                                     class="fa fa-folder-open-o"></i>{{ $shop->category->name }}</a> --}}
                                                         </li>
                                                         <li class="list-inline-item">
-                                                            <a href="#"><i class="fa fa-calendar"></i>26th December</a>
+                                                            <a href="#"><i class="fa fa-calendar"></i>23th
+                                                                May</a>
                                                         </li>
                                                     </ul>
                                                     <p class="card-text">{{ $shop->description }}</p>

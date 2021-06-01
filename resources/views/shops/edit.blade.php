@@ -52,7 +52,27 @@
                             </div>
                         </div>
 
-
+                        <div class="row form-group {{ $errors->has('category') ? 'has-error' : '' }}">
+                            <div class="col-lg-3">
+                                <lable>Shop Category:</lable>
+                            </div>
+                            <div class="col-lg-9">
+                                <select class="form-control form-control-sm" name="category_id" id="category_id"
+                                    value="{{ old('category', isset($item) ? $item->category : '') }}">
+                                    <option selected disabled>Select Category</option>
+                                    @foreach ($categories as $page)
+                                        <option value="{{ $page->id }}">
+                                            {{ $page->name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                                @if ($errors->has('category'))
+                                    <em class="invalid-feedback">
+                                        {{ $errors->first('category') }}
+                                    </em>
+                                @endif
+                            </div>
+                        </div>
 
                         <div class="row form-group {{ $errors->has('photo') ? 'has-error' : '' }}">
                             <div class="col-lg-3">
@@ -113,6 +133,30 @@
                                 @if ($errors->has('description'))
                                     <em class="invalid-feedback">
                                         {{ $errors->first('description') }}
+                                    </em>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="row form-group {{ $errors->has('area') ? 'has-error' : '' }}">
+                            <div class="col-lg-3">
+                                <lable>Shop Area:</lable>
+                            </div>
+                            <div class="col-lg-9">
+                                <select class="form-control form-control-sm" name="area_id" id="area_id"
+                                    value="{{ old('area', isset($item) ? $item->area : '') }}">
+                                    <option selected disabled>Select Area</option>
+                                    @foreach ($areas as $page)
+
+                                        <option value="{{ $page->id }}">
+                                            {{ $page->name }}
+                                        </option>
+
+                                    @endforeach
+                                </select>
+                                @if ($errors->has('area'))
+                                    <em class="invalid-feedback">
+                                        {{ $errors->first('area') }}
                                     </em>
                                 @endif
                             </div>
